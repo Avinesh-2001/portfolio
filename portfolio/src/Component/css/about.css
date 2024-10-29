@@ -148,11 +148,12 @@ body {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
 /* ------------------- MEDIA QUERIES ------------------- */
+
+/* For Medium screens (Tablets, 768px and up) */
 @media (min-width: 768px) {
     .about-container {
-        flex-direction: row;
+        flex-direction: row; /* Side-by-side layout on tablets */
     }
 
     .about-image {
@@ -160,6 +161,7 @@ body {
     }
 }
 
+/* For Small screens (Tablets, 768px and down) */
 @media (max-width: 768px) {
     .main-container {
         padding-top: 60px;
@@ -170,7 +172,7 @@ body {
     }
 
     .section-head {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Smaller heading for smaller screens */
     }
 
     .bio-text {
@@ -184,9 +186,11 @@ body {
     }
 }
 
+/* For Extra-small screens (Phones, 600px and down) */
 @media (max-width: 600px) {
     .about-container {
         padding: 1.5rem;
+        flex-direction: column; /* Stacks content vertically */
     }
 
     .section-head {
@@ -202,5 +206,45 @@ body {
     .profile-picture {
         width: 200px;
         height: 200px;
+    }
+
+    .bio-text {
+        font-size: 0.85rem;
+    }
+
+    .read-more {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* For Ultra-small screens (Phones, 480px and down) */
+@media (max-width: 480px) {
+    .about-container {
+        padding: 1rem;
+    }
+
+    .section-head {
+        font-size: 1.8rem; /* Slightly smaller heading for very small screens */
+    }
+
+    .about-content {
+        padding: 0;
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    .bio-text {
+        font-size: 0.8rem;
+        padding: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .read-more {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.75rem;
     }
 }

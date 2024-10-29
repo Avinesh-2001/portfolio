@@ -67,14 +67,14 @@
 }
 
 .allproject-box {
-    background-color: #F8F9FA;
-    border: 1px solid #DEE2E6;
+    /* background-color: #F8F9FA; */
+    /* border: 1px solid #DEE2E6; */
     height: 300px;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
 .allproject-box:hover {
@@ -170,16 +170,77 @@
     background: #ffe0e0;
 }
 
-@media (max-width: 768px) {
-    .allproject-h1 {
-        font-size: 2rem;
+/* Medium screens (tablets, 768px and up) */
+@media (max-width: 1024px) {
+    .allproject-bodycontainer {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet view */
+        gap: 2rem;
     }
 
-    .allproject-work {
+    .allproject-box {
+        height: 250px; /* Reduce box height */
+    }
+}
+
+/* Small screens (phones, 768px and down) */
+@media (max-width: 768px) {
+    .allproject-h1 {
+        font-size: 2rem; /* Reduce heading font size */
+    }
+
+    .allproject-header {
+        height: 25vh; /* Reduce header height */
+    }
+
+    .allproject-bodycontainer {
+        grid-template-columns: 1fr; /* 1 column for mobile view */
+        gap: 1.5rem;
         padding: 1rem;
     }
 
-    .box-header h4 {
-        font-size: 1.25rem;
+    .allproject-box {
+        height: 220px;
+    }
+
+    .profile i {
+        font-size: 1.5rem; /* Adjust icon size */
+        padding: 8px;
+    }
+
+    .allprojectbox-header h4 {
+        font-size: 1.2rem;
+    }
+
+    .allprojectbox-links {
+        gap: 20%; /* Adjust gap for links on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+/* Extra-small screens (phones, 480px and down) */
+@media (max-width: 480px) {
+    .allproject-h1 {
+        font-size: 1.8rem;
+    }
+
+    .allproject-header {
+        height: 20vh; /* Further reduce header height */
+    }
+
+    .profile i {
+        font-size: 1.2rem; /* Further reduce icon size */
+        padding: 5px;
+    }
+
+    .allproject-box {
+        height: 200px; /* Further reduce box height */
+    }
+
+    .allprojectbox-header h4 {
+        font-size: 1.1rem;
+    }
+
+    .allprojectbox-text p {
+        font-size: 0.8rem; /* Adjust paragraph font size for readability */
     }
 }

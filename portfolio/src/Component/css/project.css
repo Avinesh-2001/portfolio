@@ -34,14 +34,14 @@
 }
 
 .project-box {
-    background-color: #F8F9FA;
-    border: 1px solid #DEE2E6;
+    /* background-color: #F8F9FA; */
+    /* border: 1px solid #DEE2E6; */
     height: 300px;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
 .project-box:hover {
@@ -213,104 +213,113 @@
         background-color: #0288D1;
     }
 } */
-
-
-/* Small Screens (Mobile) */
-@media (max-width: 600px) {
-    .project {
-        padding: 1rem; /* Adjust padding for smaller screens */
-    }
-
-    .project-head {
-        font-size: 2.5rem; /* Smaller font size for headings */
-        margin: 1rem 0; /* Adjust margin */
-    }
-
+/* Medium screens (tablets, 1024px and down) */
+@media (max-width: 1024px) {
     .project-bodycontainer {
-        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet view */
+        gap: 2rem;
     }
 
     .project-box {
-        height: auto; /* Allow boxes to resize */
+        height: 250px;
+    }
+
+    .project-head {
+        font-size: 3rem; /* Adjust heading font size */
+        margin: 0.5rem 1rem;
+        padding: 1rem;
+    }
+
+    .projectsViewAll {
+        margin: 2rem 5rem 2rem -1rem;
+        justify-content: center;
+    }
+
+    .viewAllBtn {
+        width: 120px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+/* Small screens (phones, 768px and down) */
+@media (max-width: 768px) {
+    .project-head {
+        font-size: 2.5rem;
+        padding: 0.8rem 1rem;
+        text-align: center;
+    }
+
+    .project-header {
+        height: 25vh;
+    }
+
+    .project-bodycontainer {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .project-box {
+        height: 220px;
     }
 
     .projectbox-header h4 {
-        font-size: 1.2rem; /* Smaller header font size */
+        font-size: 1.2rem;
     }
 
     .projectbox-text p {
-        font-size: 0.8rem; /* Smaller text size */
+        font-size: 0.85rem;
+    }
+
+    .projectsViewAll {
+        margin: 2rem 2rem 2rem -0.5rem;
+        justify-content: center;
     }
 
     .viewAllBtn {
-        width: 100%; /* Full-width button */
-        padding: 0.8rem; /* Adjust padding */
-        font-size: 1rem; /* Smaller font size */
-    }
-
-    .viewAllBtn i {
-        width: 30px; /* Adjust icon size */
-        height: 30px;
-        font-size: 1rem; /* Smaller icon font size */
-    }
-}
-
-/* Medium Screens (Tablets) */
-@media (min-width: 601px) and (max-width: 900px) {
-    .project {
-        padding: 1.5rem; /* Moderate padding */
-    }
-
-    .project-head {
-        font-size: 3rem; /* Moderate heading size */
-    }
-
-    .project-bodycontainer {
-        grid-template-columns: repeat(2, 1fr); /* Two-column layout */
-    }
-
-    .projectbox-header h4 {
-        font-size: 1.5rem; /* Moderate header size */
-    }
-
-    .viewAllBtn {
-        width: 100%; /* Full-width button */
-        font-size: 1.1rem; /* Moderate font size */
-    }
-
-    .viewAllBtn i {
-        width: 35px; /* Moderate icon size */
+        width: 100px;
         height: 35px;
-        font-size: 1.1rem; /* Moderate icon font size */
+        font-size: 0.9rem;
     }
 }
 
-/* Large Screens (Desktops and larger) */
-@media (min-width: 901px) {
-    .project {
-        padding: 2rem 6rem; /* Larger padding for desktops */
-    }
-
+/* Extra-small screens (phones, 480px and down) */
+@media (max-width: 480px) {
     .project-head {
-        font-size: 4rem; /* Original heading size */
+        font-size: 2rem;
+        margin: 0.5rem;
     }
 
-    .project-bodycontainer {
-        grid-template-columns: repeat(3, 1fr); /* Three-column layout */
+    .project-header {
+        height: 20vh;
+    }
+
+    .project-box {
+        height: 200px;
     }
 
     .projectbox-header h4 {
-        font-size: 1.5rem; /* Maintain larger header size */
+        font-size: 1.1rem;
+    }
+
+    .projectbox-text p {
+        font-size: 0.8rem;
+        padding: 0.8rem;
+    }
+
+    .projectsViewAll {
+        margin: 1.5rem 1rem 1.5rem -0.5rem;
     }
 
     .viewAllBtn {
-        width: auto; /* Reset to original width */
-        font-size: 1.2rem; /* Maintain larger font size */
+        width: 90px;
+        height: 30px;
+        font-size: 0.8rem;
     }
 
     .viewAllBtn i {
-        width: 40px; /* Maintain original icon size */
-        height: 40px;
-        font-size: 1.2rem; /* Maintain larger icon font size */
+        font-size: 1rem;
+        padding: 0.3rem;
     }
 }

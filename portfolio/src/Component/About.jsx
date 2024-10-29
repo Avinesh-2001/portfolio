@@ -79,9 +79,11 @@ const About = () => {
         </div>
       </section>
 
-      <Education />
-      <Skills />
       <Experience />
+      
+      <Skills />
+      <Education />
+      
     </div>
   );
 };

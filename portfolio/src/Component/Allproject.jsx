@@ -3,8 +3,10 @@ import "./css/allproject.css";
 import one from "./../Image/enndg.png";
 import two from "./../Image/Bed (2).png";
 import three from "./../Image/invoice.png";
-import four from "./../Image/HR-dash.png";
-import { Home, Mail } from "lucide-react";
+import four from "./../Image/bmuaves.jpg";
+import five from "./../Image/HR-dash.png";
+import six from "./../Image/sales.png";
+import seven from "./../Image/usstore.png";
 import Footer from "./Footer";
 
 export class Allproject extends Component {
@@ -51,8 +53,8 @@ export class Allproject extends Component {
         title: "BMU-Aves",
         description:
           "BMU AVES is a system designed to automate vehicle entry and exit. The system uses LPR technology and OCR to detect and recognize vehicle number plates, allowing authorized vehicles to pass through without manual intervention.",
-        // image: four, // Replace with the actual image for this project
-        link1: "https://github.com/Avinesh-2001/BMU-AVES",
+        image: four, 
+                link1: "https://github.com/Avinesh-2001/BMU-AVES",
         link2: "https://github.com/Avinesh-2001/BMU-AVES",
         technologies: [
           "HTML/CSS/JavaScript",
@@ -66,7 +68,7 @@ export class Allproject extends Component {
         title: "HR Analytics Dashboard using Power BI",
         description:
           "An interactive dashboard that visualizes key HR metrics, including employee performance, retention rates, and workforce demographics, enabling data-driven decision-making and optimization of HR strategies.",
-        // image: four,
+        image: five,
         link1:
           "https://github.com/Avinesh-2001/HR-Analytics-Dashboard-using-Power-BI",
         link2:
@@ -78,17 +80,17 @@ export class Allproject extends Component {
         title: "Sales Dashboard using Power BI",
         description:
           "A dynamic Power BI sales dashboard that visualizes key sales metrics such as revenue, sales growth, and product performance, providing real-time insights for better decision-making, trend analysis, and goal tracking.",
-        // image: four,
+        image: six,
         link1: "https://github.com/Avinesh-2001/Sales-Dashboard-using-Power-BI",
         link2: "https://github.com/Avinesh-2001/Sales-Dashboard-using-Power-BI",
         technologies: ["PowerBi", "Power Query", "Dax Query"],
       },
       {
-        id: 6,
+        id: 7,
         title: "US Store Sales Manager Analysis Dashboard - Power Bi",
         description:
           "A comprehensive Power BI dashboard designed for US store sales managers, showcasing key metrics like total sales, selling products, and customer demographics, enabling data-driven insights for improving sales strategies and operational efficiency.",
-        // image: four,
+        image: seven,
         link1:
           "https://github.com/Avinesh-2001/Us-Store-Sales-Analysis-Dashboard---Power-Bi",
         link2:
