@@ -1,19 +1,22 @@
 .project {
-    padding: 40px 0 0;
-    background-color: #f1f1f1;
-    min-height: calc(100vh - 60px);
+    padding: 2px 4rem;
+    background-color: #FFFFFF;
+    /* min-height: calc(100vh - 60px); */
     display: flex;
+    color: #212529;
     flex-direction: column;
 }
 
 .project-head {
+    /* color: #007BFF; */
+    background: linear-gradient(90deg, #007BFF, #00A8E0);
+    /* background: linear-gradient(90deg, #6A5ACD, #007BFF); */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    font-size: 4rem;
+    margin: 1rem 2rem;
+    padding: 1rem 1.5rem;
     text-align: center;
-    padding-left: 25px;
-    margin: 0 0 30px 25px;
-    color: #D32F2F;
-    font-size: 3.5rem;
-    text-shadow: 0 0 10px rgba(211, 47, 47, 0.5);
-    animation: colorChange 5s infinite alternate;
 }
 
 .project-container {
@@ -24,94 +27,99 @@
 
 .project-bodycontainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
     padding: 2rem;
 
 }
 
 .project-box {
-    height: 350px;
-    border-radius: 15px;
+    background-color: #F8F9FA;
+    border: 1px solid #DEE2E6;
+    height: 300px;
+    border-radius: 10px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .project-box:hover {
     transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+    border-color: #007BFF; 
 }
 
-.box-header {
+.projectbox-header {
     height: 10%;
     padding: 1rem;
 }
 
-.box-header h4 {
+.projectbox-header h4 {
     font-size: 1.3rem;
     font-weight: bold;
-    color: #333;
+    color: #007BFF;
     margin: 0;
     text-align: center;
 }
 
-.project .box-image {
-    width: 50%;
-    height: 50%;
-    margin: 20px auto;
+.project .projectbox-image {
+    width: 60%;
+    height: 70%;
+    margin: 40px auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.box-image img {
+.projectbox-image img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     mix-blend-mode: multiply;
-    border-radius: 15px;
     transition: transform 3s;
 }
 
-.box-text {
+.projectbox-text {
     width: 100%;
     height: auto;
     position: absolute;
-    top: -100%;
+    top: -120%;
     right: 0;
     background-color: rgba(31, 61, 71, 0.95);
     backdrop-filter: blur(40px);
-    border-radius: 15px;
-    color: white;
+    border-radius: 1px;
+    color: #eaeaea;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: 2s;
 }
 
-.project-box:hover .box-text {
+.project-box:hover .projectbox-text {
     height: 100%;
     text-align: center;
     top: 0;
 }
 
-.box-text p {
-    font-size: 1rem;
+.projectbox-text p {
+    font-size: 0.9rem;
+    text-wrap: pretty;
     line-height: 1.8;
-    margin: 2rem;
-    margin-bottom: -2rem;
-    text-align: center;
+    margin: 1rem;
+    margin-bottom: 0rem;
+    text-align: justify;
+    color: #eaeaea;
 }
 
-.box-links {
+.projectbox-links {
     display: flex;
     gap: 50%;
     justify-content: center;
     margin-bottom: 40px;
 }
 
-.box-text a {
+.projectbox-text a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -119,12 +127,12 @@
     height: 40px;
     color: black;
     text-decoration: none;
-    background: #ffeaea;
+    /* background: #ffeaea; */
     border-radius: 50%;
     transition: 2s;
 }
 
-.box-text a:hover {
+.projectbox-text a:hover {
     transform: scale(1.1);
     background: #ffe0e0;
 }
@@ -137,7 +145,7 @@
 }
 
 .viewAllBtn {
-    background-color: #0288D1;
+    background: linear-gradient(90deg, #007BFF, #00A8E0);
     color: #eaeaea;
     transition: color 0.2s;
     outline: none;
@@ -149,26 +157,27 @@
     justify-content: space-between;
     text-transform: inherit;
     border-radius: 45px;
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     font-family: var(--primaryFont);
-    font-weight: 500;
+    font-weight: bold;
     padding-left: 1.6rem;
     cursor: pointer;
     text-decoration: none;
     animation: react-reveal-771851226535181-1 4s ease-out 1, backgroundChange 7s infinite alternate;
 }
 
-.viewAllBtn:hover {
+.viewAllBtn:hover{
     transform: scale(1.02);
+    background: linear-gradient(90deg,  #00A8E0,#007BFF);
 }
 
 .viewAllBtn i {
-    background-color: #56041e;
+    background-color: #007BFF;
     color: #eaeaea;
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     padding: 0.5rem;
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     transition: background-color 0.2s;
     border-radius: 50%;
     display: flex;
@@ -176,6 +185,10 @@
     justify-content: center;
     text-decoration: none;
 }
+.viewAllBtn:hover i {
+    color: #00A8E0;
+}
+
 
 .projectsViewAll a {
     text-decoration: none;
@@ -192,11 +205,112 @@
     }
 }
 
-@keyframes backgroundChange {
+/* @keyframes backgroundChange {
     0% {
         background-color: #D32F2F;
     }
     100% {
         background-color: #0288D1;
+    }
+} */
+
+
+/* Small Screens (Mobile) */
+@media (max-width: 600px) {
+    .project {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .project-head {
+        font-size: 2.5rem; /* Smaller font size for headings */
+        margin: 1rem 0; /* Adjust margin */
+    }
+
+    .project-bodycontainer {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .project-box {
+        height: auto; /* Allow boxes to resize */
+    }
+
+    .projectbox-header h4 {
+        font-size: 1.2rem; /* Smaller header font size */
+    }
+
+    .projectbox-text p {
+        font-size: 0.8rem; /* Smaller text size */
+    }
+
+    .viewAllBtn {
+        width: 100%; /* Full-width button */
+        padding: 0.8rem; /* Adjust padding */
+        font-size: 1rem; /* Smaller font size */
+    }
+
+    .viewAllBtn i {
+        width: 30px; /* Adjust icon size */
+        height: 30px;
+        font-size: 1rem; /* Smaller icon font size */
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .project {
+        padding: 1.5rem; /* Moderate padding */
+    }
+
+    .project-head {
+        font-size: 3rem; /* Moderate heading size */
+    }
+
+    .project-bodycontainer {
+        grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+    }
+
+    .projectbox-header h4 {
+        font-size: 1.5rem; /* Moderate header size */
+    }
+
+    .viewAllBtn {
+        width: 100%; /* Full-width button */
+        font-size: 1.1rem; /* Moderate font size */
+    }
+
+    .viewAllBtn i {
+        width: 35px; /* Moderate icon size */
+        height: 35px;
+        font-size: 1.1rem; /* Moderate icon font size */
+    }
+}
+
+/* Large Screens (Desktops and larger) */
+@media (min-width: 901px) {
+    .project {
+        padding: 2rem 6rem; /* Larger padding for desktops */
+    }
+
+    .project-head {
+        font-size: 4rem; /* Original heading size */
+    }
+
+    .project-bodycontainer {
+        grid-template-columns: repeat(3, 1fr); /* Three-column layout */
+    }
+
+    .projectbox-header h4 {
+        font-size: 1.5rem; /* Maintain larger header size */
+    }
+
+    .viewAllBtn {
+        width: auto; /* Reset to original width */
+        font-size: 1.2rem; /* Maintain larger font size */
+    }
+
+    .viewAllBtn i {
+        width: 40px; /* Maintain original icon size */
+        height: 40px;
+        font-size: 1.2rem; /* Maintain larger icon font size */
     }
 }

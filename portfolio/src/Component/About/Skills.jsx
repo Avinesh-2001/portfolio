@@ -1,4 +1,4 @@
-import "./../css/about.css";
+import "./../css/skills.css";
 import React, { useState } from "react";
 
 const Skills = () => {
@@ -62,7 +62,7 @@ const Skills = () => {
           {data.skills.map((skill, index) => (
             <li
               key={`${category}-${index}`}
-              style={{ "--delay": `${(index + 1) * 2}s` }}
+              style={{ "--delay": `${index * 1}s` }} // Update to 1 second interval
             >
               <i className={skill.icon} />
               <span>{skill.name}</span>
@@ -75,7 +75,9 @@ const Skills = () => {
 
   return (
     <div className="skills">
-      <h2 className="section-head skills-head" style={{textAlign:"center"}}>SKILLS</h2>
+      <h2 className="skills-head" style={{ textAlign: "center" }}>
+        SKILLS
+      </h2>
       <div className="skills-list">
         {Object.entries(skillsData).map(([category, data]) => (
           <SkillCategory key={category} category={category} data={data} />

@@ -1,6 +1,6 @@
 import React from "react";
 import education from "./../../Image/education.png";
-
+import './../css/expedu.css';
 const Education = () => {
   const educationData = [
     {
@@ -19,7 +19,7 @@ const Education = () => {
 
   return (
     <div className="education">
-      <h2 className="section-head edu-head" style={{padding:"80px 15px 0px 25px"}}>Education</h2>
+      <h2 className="education-head">Education</h2>
       <div className="edu-side">
         <div className="edu-leftside">
           <ul>

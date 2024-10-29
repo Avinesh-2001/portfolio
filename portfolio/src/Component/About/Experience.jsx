@@ -1,6 +1,6 @@
 import React from "react";
 import exp from "./../../Image/exp.png";
-
+import './../css/expedu.css';
 const Experience = () => {
   const experienceData = [
     {
@@ -19,7 +19,7 @@ const Experience = () => {
 
   return (
     <div className="exp">
-      <h2 className="section-head exp-head" style={{textAlign:"right", paddingRight:"20px"}}>Experience</h2>
+      <h2 className="exp-head">Experience</h2>
       <div className="exp-side">
         <div className="exp-leftside">
           <img src={exp} alt="Experience illustration" />

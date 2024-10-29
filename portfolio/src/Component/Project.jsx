@@ -20,7 +20,7 @@ class Project extends Component {
         id: 2,
         title: "Hospital Ward Manufacture",
         description:
-          "This project is a comprehensive website for Bajaj Wellmed International, designed to provide visitors with seamless access to healthcare solutions. The website is built using the MERN stack (MongoDB, Express.js, React.js, and Node.js) and focuses on delivering an intuitive and user-friendly experience.",
+          "This project is a comprehensive website for BWI, designed to provide visitors with seamless access to healthcare solutions. The website is built using the MERN stack (MongoDB, Express.js, React.js, and Node.js) and focuses on delivering an intuitive and user-friendly experience.",
         image: two,
         link: "https://github.com/Avinesh-2001/Hospital-Ward-Furniture-Website",
         technologies: ["ReactJs", "Node.js", "Express.js", "MongoDB"],
@@ -43,29 +43,29 @@ class Project extends Component {
           <div className="project-bodycontainer">
             {projects.map((project) => (
               <div className="project-box" key={project.id}>
-              <div className="box-header">
-                <h4>{project.title}</h4>
-              </div>
-              <div className="box-image">
-                {project.image && (
-                  <img src={project.image} alt={project.title} />
-                )}
-              </div>
-              <div className="box-text">
-                <p>{project.description}</p>
-                <div className="box-links">
-                  <a href={project.link}>
-                    <i className="fa fa-globe" aria-hidden="true"></i>
-                  </a>
-                  <a href={project.link}>
-                    <i
-                      className="fa-solid fa-arrow-up-right-from-square"
-                      aria-hidden="true"
-                    ></i>
-                  </a>
+                <div className="projectbox-header">
+                  <h4>{project.title}</h4>
+                </div>
+                <div className="projectbox-image">
+                  {project.image && (
+                    <img src={project.image} alt={project.title} />
+                  )}
+                </div>
+                <div className="projectbox-text">
+                  <p>{project.description}</p>
+                  <div className="projectbox-links">
+                    <a href={project.link}>
+                      <i className="fa fa-globe" aria-hidden="true"></i>
+                    </a>
+                    <a href={project.link}>
+                      <i
+                        className="fa-solid fa-arrow-up-right-from-square"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
             ))}
           </div>
         </div>

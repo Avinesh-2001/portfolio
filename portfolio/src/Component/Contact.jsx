@@ -37,7 +37,8 @@ export class Contact extends Component {
       });
     } catch (error) {
       this.setState({
-        errorMessage: "There was an error sending your message. Please try again.",
+        errorMessage:
+          "There was an error sending your message. Please try again.",
         successMessage: "",
       });
     }
@@ -45,10 +46,10 @@ export class Contact extends Component {
 
   render() {
     const { successMessage, errorMessage } = this.state;
-    
+
     return (
       <div id="contact" className="contact">
-        <h2 className="section-head" style={{marginLeft:"65px"}}>Contact me</h2>
+        <h2 className="contact-head">Contact me</h2>
         <div className="contact-container">
           <div className="row">
             <div className="contact-leftSide">
@@ -89,20 +90,24 @@ export class Contact extends Component {
                 </div>
                 <button type="submit" className="submitBtn">
                   Submit
-                  <i
+                  {/* <i
                     className="fa fa-paper-plane"
                     aria-hidden="true"
                     style={{ marginLeft: "10px" }}
-                  ></i>
+                  ></i> */}
                 </button>
               </form>
-              {successMessage && <p className="success-message">{successMessage}</p>}
+              {successMessage && (
+                <p className="success-message">{successMessage}</p>
+              )}
               {errorMessage && <p className="error-message">{errorMessage}</p>}
             </div>
             <div className="contact-rightside">
               <p>
                 <i className="fa fa-at" aria-hidden="true"></i>
-                <a href="mailto:avijangid7011@gmail.com">avijangid7011@gmail.com</a>
+                <a href="mailto:avijangid7011@gmail.com">
+                  avijangid7011@gmail.com
+                </a>
               </p>
               <p>
                 <i className="fa-solid fa-phone"></i>
@@ -140,12 +145,6 @@ export class Contact extends Component {
               <i className="fas fa-laptop-code"></i>
             </a>
           </div>
-        </div>
-        <div className="copyRight">
-          <p>
-            Copyright &#169; {new Date().getFullYear()} Avinesh' Portfolio{" "}
-            <i className="fa fa-book"></i>
-          </p>
         </div>
       </div>
     );

@@ -1,9 +1,10 @@
 import React from "react";
 import "./css/profile.css";
-import profile from "./../Image/Avinesh_BMU.png";
+import profile from "./../Image/mine.jpg";
 import About from "./About";
 import Contact from "./Contact";
 import Project from "./Project";
+import Footer from "./Footer";
 // import Allproject from "./Allproject";
 
 class Profile extends React.Component {
@@ -12,15 +13,12 @@ class Profile extends React.Component {
     this.state = {
       role: "Frontend Developer",
       animate: false,
-      name: ['A', 'v', 'i', 'n', 'e', 's', 'h'],
     };
   }
 
   openPDF = () => {
     window.open("/Avinesh_CV.pdf", "_blank");
   };
-
-  
 
   componentDidMount() {
     this.setState({ animate: true });
@@ -32,40 +30,21 @@ class Profile extends React.Component {
             : "Frontend Developer",
       }));
     }, 3000);
-
-    // Start letter animation
-    this.letterAnimationInterval = setInterval(() => {
-      this.setState((prevState) => {
-        const nextIndex = (prevState.currentLetterIndex + 1) % (prevState.name.length + 1);
-        return { currentLetterIndex: nextIndex };
-      });
-    }, 500); // 0.5 second interval for each letter
   }
 
   componentWillUnmount() {
     clearInterval(this.interval);
-    clearInterval(this.letterAnimationInterval);
   }
 
   render() {
-    const { animate, role, name } = this.state; // Destructure name
+    const { animate, role } = this.state; // Destructure name
     return (
       <div>
         <div id="profile" className={`container ${animate ? "animate" : ""}`}>
           <div className="diagonal-line"></div>
           <div className="left-side">
             <h1 className="heading">
-              Hi all, I am{" "}
-              {name.map((letter, index) => (
-                <span
-                  key={index}
-                  className="name"
-                  style={{ animationDelay: `${index * 0.5}s` }} 
-                >
-                  {letter}
-                </span>
-              ))}{" "}
-              ..
+              Hi all, I am <span className="name">Avinesh...</span>
             </h1>
 
             <p className="description">
@@ -95,7 +74,7 @@ class Profile extends React.Component {
               </a>
               <a
                 href="https://www.geeksforgeeks.org/user/avi_nesh_2001/"
-                className="geeksforgeeks"
+                className="GeeksforGeeks"
                 title="GeeksforGeeks"
               >
                 <i className="fas fa-laptop-code"></i>
@@ -117,6 +96,9 @@ class Profile extends React.Component {
         </div>
         <div id="contact">
           <Contact />
+        </div>
+        <div id="footer">
+          <Footer />
         </div>
       </div>
     );

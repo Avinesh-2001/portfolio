@@ -11,6 +11,7 @@ import About from "./Component/About";
 import Contact from "./Component/Contact";
 import Allproject from "./Component/Allproject";
 import BackToTop from "./Component/BackToTop";
+import Footer from "./Component/Footer";
 
 function App() {
   return (
@@ -36,6 +37,8 @@ function AppRoutes() {
         <Route path="/project" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/Allproject" element={<Allproject />} />
+        <Route path="/footer" element={<Footer/>} />
+
       </Routes>
     </>
   );

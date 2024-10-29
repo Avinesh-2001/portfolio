@@ -3,6 +3,7 @@ import Education from "./About/Education";
 import Skills from "./About/Skills";
 import Experience from "./About/Experience";
 import about from "./../Image/aboutme.png";
+import './css/about.css';
 
 const About = () => {
   const [expanded, setExpanded] = useState(false);
@@ -28,6 +29,9 @@ const About = () => {
     { id: 1, backgroundColor: "#FF4081" },
     { id: 2, backgroundColor: "#FF4081" },
   ];
+  
+
+  
 
   return (
     <div
@@ -57,10 +61,10 @@ const About = () => {
           </div>
 
           <div className="about-content">
-            <h2 className="section-head">Who I am ....</h2>
+            <h2 className="section-head">About Me ..</h2>
             <div className="bio-text">
-              <p>
-                {shortBio}
+              <p className="about-biotext">
+                {(shortBio)}
                 {expanded && fullBio}
               </p>
               <button

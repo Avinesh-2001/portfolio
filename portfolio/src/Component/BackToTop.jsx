@@ -39,7 +39,7 @@ class BackToTop extends Component {
         return (
             <div style={{ display: visible ? 'inline' : 'none' }} className='backToTop'>
                 <button onClick={this.scrollToTop} aria-label='Back to top'>
-                    <IoIosArrowDropupCircle style={{ fontSize: '3rem', color: '#eaeaea' }} />
+                    <IoIosArrowDropupCircle style={{ fontSize: '3rem', color: '#0964d374' }} />
                 </button>
             </div>
         );

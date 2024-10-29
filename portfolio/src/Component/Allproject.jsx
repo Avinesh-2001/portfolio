@@ -5,6 +5,7 @@ import two from "./../Image/Bed (2).png";
 import three from "./../Image/invoice.png";
 import four from "./../Image/HR-dash.png";
 import { Home, Mail } from "lucide-react";
+import Footer from "./Footer";
 
 export class Allproject extends Component {
   componentDidMount() {
@@ -97,28 +98,28 @@ export class Allproject extends Component {
     ];
 
     return (
-      <div className="allproject">
+      <>      <div className="allproject">
         <div className="allproject-header">
           <a href="/profile" class="profile">
-            <i class="fa-solid fa-house" aria-hidden="true"></i>
+            <i class="fa-solid fa-house" aria-hidden="true" title="home"></i>
           </a>
           <h1 className="allproject-h1">Projects</h1>
         </div>
         <div className="allproject-container">
-          <div className="allproject-work">
+          <div className="allproject-bodycontainer">
             {allprojects.map((project) => (
               <div className="allproject-box" key={project.id}>
-                <div className="box-header">
+                <div className="allprojectbox-header">
                   <h4>{project.title}</h4>
                 </div>
-                <div className="box-image">
+                <div className="allprojectbox-image">
                   {project.image && (
                     <img src={project.image} alt={project.title} />
                   )}
                 </div>
-                <div className="box-text">
+                <div className="allprojectbox-text">
                   <p>{project.description}</p>
-                  <div className="box-links">
+                  <div className="allprojectbox-links">
                     <a href={project.link1}>
                       <i className="fa fa-globe" aria-hidden="true"></i>
                     </a>
@@ -135,6 +136,11 @@ export class Allproject extends Component {
           </div>
         </div>
       </div>
+      <div>
+        <Footer />
+      </div>
+      </>
+
     );
   }
 }

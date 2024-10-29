@@ -5,6 +5,7 @@
     height: 30px;
     font-size: 3rem;
     z-index: 999;
+    color: #0964d374;
 }
 
 .backToTop button {
@@ -13,7 +14,7 @@
     cursor: pointer;
     background: none;
     padding: 20px;
-    color: aliceblue;
+    color: rgb(101, 161, 213);
 }
 
 @media screen and (max-width: 800px) {
