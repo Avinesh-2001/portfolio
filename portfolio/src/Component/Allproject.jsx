@@ -22,7 +22,7 @@ export class Allproject extends Component {
         description:
           "Endangered.io is web platform raising awareness about endangered species, including mammals, sea creatures, & birds. It provides information on their conservation status, habitats, & the threats they face, promoting global conservation efforts.",
         image: one,
-        link1: "https://github.com/Avinesh-2001/Endangered.io",
+        link1: "https://avinesh-2001.github.io/Endangered.io/",
         link2: "https://github.com/Avinesh-2001/Endangered.io",
         technologies: ["HTML", "CSS", "JavaScript"],
       },
@@ -44,7 +44,7 @@ export class Allproject extends Component {
         description:
           "Proforma Invoice Generator: A web application built with HTML, CSS, and JavaScript, enabling users to create and download professional PDF invoices efficiently, streamlining the invoicing process for businesses and individuals.",
         image: three,
-        link1: "https://github.com/Avinesh-2001/Proforma-Invoice-Generator",
+        link1: "https://avinesh-2001.github.io/Proforma-Invoice-Generator/",
         link2: "https://github.com/Avinesh-2001/Proforma-Invoice-Generator",
         technologies: ["HTML", "CSS", "JavaScript"],
       },
@@ -54,7 +54,7 @@ export class Allproject extends Component {
         description:
           "BMU AVES is a system designed to automate vehicle entry and exit. The system uses LPR technology and OCR to detect and recognize vehicle number plates, allowing authorized vehicles to pass through without manual intervention.",
         image: four, 
-                link1: "https://github.com/Avinesh-2001/BMU-AVES",
+                link1: "https://avinesh-2001.github.io/BMU-AVES/",
         link2: "https://github.com/Avinesh-2001/BMU-AVES",
         technologies: [
           "HTML/CSS/JavaScript",

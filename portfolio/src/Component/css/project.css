@@ -87,12 +87,14 @@
     flex-direction: column;
     justify-content: space-between;
     transition: 2s;
+    padding: 0.5rem;  
 }
 
 .project-box:hover .projectbox-text {
     height: 100%;
     text-align: center;
     top: 0;
+    /* overflow-y: auto;  */
 }
 
 .projectbox-text p {
@@ -103,6 +105,8 @@
     margin-bottom: 0;
     text-align: justify;
     color: #eaeaea;
+    overflow-wrap: break-word;  /* Added to prevent text overflow */
+    word-wrap: break-word;   
 }
 
 .projectbox-links {
@@ -254,91 +258,161 @@
     }
 }
 
-/* Extra small screens (phones, 576px to 767px) */
 @media screen and (max-width: 767px) {
-    .project-head {
-        font-size: 2.5rem;
-        margin: 0.8rem;
-        padding: 0.6rem;
-    }
-
-    .project-bodycontainer {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 1rem;
-    }
-
-    .project-box {
-        height: 260px;
-    }
-
-    .projectbox-header h4 {
-        font-size: 1.2rem;
-    }
-
-    .projectbox-text p {
-        font-size: 0.85rem;
-        line-height: 1.6;
-    }
-
-    .projectsViewAll {
-        margin: 1.5rem 3rem 1.5rem -0.5rem;
-        justify-content: center;
-    }
-
-    .viewAllBtn {
-        width: 120px;
-        height: 40px;
-        font-size: 1rem;
-        padding-left: 1.2rem;
-    }
-}
-
-/* Very small screens (small phones, 575px and below) */
-@media screen and (max-width: 575px) {
     .project {
         padding: 2px 0.5rem;
     }
 
     .project-head {
-        font-size: 2rem;
-        margin: 0.5rem;
-        padding: 0.5rem;
+        font-size: 2.2rem;
+        margin: 0.8rem 0;
+        padding: 0.6rem;
+    }
+
+    .project-container {
+        padding: 0 10px;
     }
 
     .project-bodycontainer {
-        gap: 1rem;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
         padding: 0.8rem;
     }
 
     .project-box {
-        height: 240px;
+        height: 220px;  /* Reduced height for better mobile view */
     }
 
     .projectbox-header h4 {
         font-size: 1.1rem;
+        padding: 0.5rem;
+    }
+
+    .project .projectbox-image {
+        width: 50%;    /* Reduced image width */
+        height: 60%;   /* Reduced image height */
+        margin: 30px auto;
+    }
+
+    .projectbox-text {
+        padding: 0.8rem;
     }
 
     .projectbox-text p {
-        font-size: 0.8rem;
-        margin: 0.8rem;
+        font-size: 0.85rem;
         line-height: 1.5;
+        margin: 0.5rem;
+        max-height: 150px;  /* Added max height */
+        overflow-y: auto;   /* Added scroll for long text */
     }
 
     .projectsViewAll {
-        margin: 1rem 2rem 1rem -0.25rem;
+        margin: 1.5rem 0;  /* Simplified margin */
+        justify-content: center;
+        padding: 0 1rem;
     }
 
     .viewAllBtn {
-        width: 110px;
-        height: 36px;
+        width: auto;      /* Changed to auto width */
+        min-width: 100px; /* Added minimum width */
+        height: 36px;     /* Reduced height */
         font-size: 0.9rem;
-        padding-left: 1rem;
+        padding: 0 1rem;  /* Adjusted padding */
     }
 
     .viewAllBtn i {
         width: 32px;
         height: 32px;
+        font-size: 0.9rem;
+        margin-left: 0.5rem;  /* Added margin for spacing */
+    }
+}
+
+/* Added specific styles for very small phones */
+@media screen and (max-width: 420px) {
+    .project-head {
+        font-size: 1.8rem;
+        margin: 0.5rem 0;
+        padding: 0.4rem;
+    }
+
+    .project-box {
+        height: 200px;  /* Further reduced height */
+    }
+
+    .projectbox-header h4 {
         font-size: 1rem;
+        padding: 0.3rem;
+    }
+
+    .project .projectbox-image {
+        width: 45%;    /* Further reduced image width */
+        height: 55%;   /* Further reduced image height */
+        margin: 25px auto;
+    }
+
+    .projectbox-text {
+        padding: 0.5rem;
+    }
+
+    .projectbox-text p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        margin: 0.3rem;
+        max-height: 120px;
+    }
+
+    .projectbox-links {
+        gap: 30%;     /* Reduced gap between links */
+        margin-bottom: 20px;
+    }
+
+    .projectbox-text a {
+        width: 32px;  /* Reduced link size */
+        height: 32px;
+    }
+
+    .viewAllBtn {
+        min-width: 90px;
+        height: 32px;
+        font-size: 0.8rem;
+        padding: 0 0.8rem;
+    }
+
+    .viewAllBtn i {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+        padding: 0.3rem;
+    }
+}
+
+/* Added styles for extremely small screens */
+@media screen and (max-width: 360px) {
+    .project-head {
+        font-size: 1.6rem;
+    }
+
+    .project-box {
+        height: 180px;
+    }
+
+    .projectbox-text p {
+        font-size: 0.75rem;
+        line-height: 1.3;
+        max-height: 100px;
+    }
+
+    .viewAllBtn {
+        min-width: 80px;
+        height: 30px;
+        font-size: 0.75rem;
+        padding: 0 0.6rem;
+    }
+
+    .viewAllBtn i {
+        width: 24px;
+        height: 24px;
+        font-size: 0.7rem;
     }
 }

@@ -13,7 +13,8 @@ class Project extends Component {
         description:
           "Endangered.io is a web platform designed to raise awareness about the world's most endangered species, including mammals, sea creatures, and birds. Learn about their conservation status, habitats, and the threats they face, all in one interactive site.",
         image: one,
-        link: "https://github.com/Avinesh-2001/Endangered.io",
+        link1: "https://avinesh-2001.github.io/Endangered.io/",
+        link2: "https://github.com/Avinesh-2001/Endangered.io",
         technologies: ["HTML", "CSS", "JavaScript"],
       },
       {
@@ -22,7 +23,8 @@ class Project extends Component {
         description:
           "This project is a comprehensive website for BWI, designed to provide visitors with seamless access to healthcare solutions. The website is built using the MERN stack (MongoDB, Express.js, React.js, and Node.js) and focuses on delivering an intuitive and user-friendly experience.",
         image: two,
-        link: "https://github.com/Avinesh-2001/Hospital-Ward-Furniture-Website",
+        link1:"https://github.com/Avinesh-2001/Hospital-Ward-Furniture-Website",
+        link2: "https://github.com/Avinesh-2001/Hospital-Ward-Furniture-Website",
         technologies: ["ReactJs", "Node.js", "Express.js", "MongoDB"],
       },
       {
@@ -31,7 +33,9 @@ class Project extends Component {
         description:
           "Proforma Invoice Generator: A web application built with HTML, CSS, and JavaScript that allows users to create and download professional PDF invoices.",
         image: three,
-        link: "https://github.com/Avinesh-2001/Proforma-Invoice-Generator",
+        link1:"https://avinesh-2001.github.io/Proforma-Invoice-Generator/",
+        link2: "https://github.com/Avinesh-2001/Proforma-Invoice-Generator",
+
         technologies: ["HTML", "CSS", "JavaScript"],
       },
     ];
@@ -54,10 +58,10 @@ class Project extends Component {
                 <div className="projectbox-text">
                   <p>{project.description}</p>
                   <div className="projectbox-links">
-                    <a href={project.link}>
+                    <a href={project.link1}>
                       <i className="fa fa-globe" aria-hidden="true"></i>
                     </a>
-                    <a href={project.link}>
+                    <a href={project.link2}>
                       <i
                         className="fa-solid fa-arrow-up-right-from-square"
                         aria-hidden="true"
