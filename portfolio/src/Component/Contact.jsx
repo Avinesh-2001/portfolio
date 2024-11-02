@@ -117,7 +117,7 @@ export class Contact extends Component {
           </div>
           <div className="contact-social-icons">
             <a
-              href="https://leetcode.com/u/Avu_1981/"
+              href="https://www.linkedin.com/in/avinesh2001/"
               className="linkedin"
               title="LinkedIn"
             >

@@ -52,7 +52,7 @@ class Profile extends React.Component {
             </p>
             <div className="social-icons">
               <a
-                href="https://leetcode.com/u/Avu_1981/"
+                href="https://www.linkedin.com/in/avinesh2001/"
                 className="linkedin"
                 title="LinkedIn"
               >

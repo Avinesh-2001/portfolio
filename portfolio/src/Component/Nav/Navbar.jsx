@@ -30,14 +30,12 @@ const Navbar = () => {
   }, [location]);
 
   const NavItem = ({ to, label }) => {
-    if (location.pathname === "/") {
-      return (
-        <ScrollLink to={to} smooth={true} duration={500}>
-          {label}
-        </ScrollLink>
-      );
-    }
-    return (
+    const isHomepage = location.pathname === "/"; // Check if on homepage
+    return isHomepage ? (
+      <ScrollLink to={to} smooth={true} duration={500} offset={-70}>
+        {label}
+      </ScrollLink>
+    ) : (
       <RouterLink to={`/${to}`}>
         {label}
       </RouterLink>
